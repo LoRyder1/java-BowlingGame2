@@ -35,7 +35,6 @@ public class BowlingGameTest {
         rollMany(10, 1);
         rollMany(10, 2);
         assertEquals(30, g.score());
-
     }
 
     @Test
@@ -54,5 +53,11 @@ public class BowlingGameTest {
         g.roll(4);
         rollMany(16,0);
         assertEquals(24, g.score());
+    }
+
+    @Test
+    public void testPerfectGame() {
+        rollMany(12, 10);
+        assertEquals(300, g.score());
     }
 }
