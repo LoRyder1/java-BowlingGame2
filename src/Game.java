@@ -11,9 +11,9 @@ public class Game {
     public int score() {
         int score = 0;
         int frameIndex = 0;
-        for(int i = 0; i < rolls.length; i++) {
-            score += rolls[frameIndex];
-            frameIndex += 1;
+        for(int frame = 0; frame < 10; frame++) {
+            score += rolls[frameIndex] + rolls[frameIndex +1];
+            frameIndex += 2;
         }
         return score;
     }
